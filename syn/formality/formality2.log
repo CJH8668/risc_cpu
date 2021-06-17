@@ -1,0 +1,38 @@
+****************************************************
+
+Info:  Multiple drivers on net r:/DESIGN_LIB/cpu/data[7].
+Info:  Multiple drivers on net r:/DESIGN_LIB/cpu/data[6].
+Info:  Multiple drivers on net r:/DESIGN_LIB/cpu/data[5].
+Info:  Multiple drivers on net r:/DESIGN_LIB/cpu/data[4].
+Info:  Multiple drivers on net r:/DESIGN_LIB/cpu/data[3].
+Info:  Multiple drivers on net r:/DESIGN_LIB/cpu/data[2].
+Info:  Multiple drivers on net r:/DESIGN_LIB/cpu/data[1].
+Info:  Multiple drivers on net r:/DESIGN_LIB/cpu/data[0].
+Info:  Multiple drivers on net r:/DESIGN_LIB/datactl/data[7].
+Info:  Multiple drivers on net r:/DESIGN_LIB/datactl/data[6].
+Info:  Multiple drivers on net r:/DESIGN_LIB/datactl/data[5].
+Info:  Multiple drivers on net r:/DESIGN_LIB/datactl/data[4].
+Info:  Multiple drivers on net r:/DESIGN_LIB/datactl/data[3].
+Info:  Multiple drivers on net r:/DESIGN_LIB/datactl/data[2].
+Info:  Multiple drivers on net r:/DESIGN_LIB/datactl/data[1].
+Info:  Multiple drivers on net r:/DESIGN_LIB/datactl/data[0].
+Info:  Multiple drivers on net i:/DESIGN_LIB/cpu/data[7].
+Info:  Multiple drivers on net i:/DESIGN_LIB/cpu/data[6].
+Info:  Multiple drivers on net i:/DESIGN_LIB/cpu/data[5].
+Info:  Multiple drivers on net i:/DESIGN_LIB/cpu/data[4].
+Info:  Multiple drivers on net i:/DESIGN_LIB/cpu/data[3].
+Info:  Multiple drivers on net i:/DESIGN_LIB/cpu/data[2].
+Info:  Multiple drivers on net i:/DESIGN_LIB/cpu/data[1].
+Info:  Multiple drivers on net i:/DESIGN_LIB/cpu/data[0].
+Info:  Net i:/DESIGN_LIB/alu_DW01_add_0/CO is undriven.
+Info:  Multiple drivers on net i:/DESIGN_LIB/datactl/data[7].
+Info:  Multiple drivers on net i:/DESIGN_LIB/datactl/data[6].
+Info:  Multiple drivers on net i:/DESIGN_LIB/datactl/data[5].
+Info:  Multiple drivers on net i:/DESIGN_LIB/datactl/data[4].
+Info:  Multiple drivers on net i:/DESIGN_LIB/datactl/data[3].
+Info:  Multiple drivers on net i:/DESIGN_LIB/datactl/data[2].
+Info:  Multiple drivers on net i:/DESIGN_LIB/datactl/data[1].
+Info:  Multiple drivers on net i:/DESIGN_LIB/datactl/data[0].
+Info:  Multiple drivers on net i:/TECH_LIB/TBUFV24_140P9T35R/n1.
+****************************************************
+

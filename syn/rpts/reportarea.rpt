@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : cpu
+Version: O-2018.06-SP1
+Date   : Tue Jun 15 10:42:41 2021
+****************************************
+
+Library(s) Used:
+
+    scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic (File: /home1/chengjinhui/risc_cpu/syn/lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db)
+
+Number of ports:                          261
+Number of nets:                           598
+Number of cells:                          357
+Number of combinational cells:            270
+Number of sequential cells:                76
+Number of macros/black boxes:               0
+Number of buf/inv:                        119
+Number of references:                      11
+
+Combinational area:                203.364000
+Buf/Inv area:                       85.301999
+Noncombinational area:             180.558000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   383.921999
+Total area:                 undefined
+1

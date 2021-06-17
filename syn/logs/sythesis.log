@@ -1,0 +1,764 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version O-2018.06-SP1 for linux64 - Jul 19, 2018 
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+Initializing gui preferences from file  /home1/chengjinhui/.synopsys_dv_prefs.tcl
+################################################################# 
+#    setup global variables
+################################################################# 
+set	ProjHomePath /home1/chengjinhui/risc_cpu
+/home1/chengjinhui/risc_cpu
+set DesignTopName cpu
+cpu
+#################################################################
+#   BEGIN PROJECT COMMON VARIABLES SETTING
+#################################################################
+set ProjRTLPath     /home1/chengjinhui/risc_cpu/src
+/home1/chengjinhui/risc_cpu/src
+set ProjSYNPath     /home1/chengjinhui/risc_cpu/syn
+/home1/chengjinhui/risc_cpu/syn
+set	DesignWarePath	/home/eda/synopsys/dc/O-2018.06-SP1/libraries/syn
+/home/eda/synopsys/dc/O-2018.06-SP1/libraries/syn
+#####################################################
+#set	TestReadySyn	true
+set	ClockGatingSyn	false
+false
+set 	hdlin_work_directory 			../temp/
+Information: Variable 'hdlin_work_directory' is obsolete and is being ignored. (INFO-100)
+../temp/
+define_design_lib DEFAULT -path 		../temp/
+1
+######################################################
+#    SYNTHESIS LIBRARY VARIABLES DEFINE
+######################################################
+set target_library      "../lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db"
+../lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db
+set synthetic_library [list                   dw_foundation.sldb ]
+dw_foundation.sldb
+set link_library [list * ../lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db ]
+* ../lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db
+#################################################################
+#    read in project verilog source code
+#################################################################
+set RTLFileList [exec cat ../../scripts/filelist]
+../src/cpu.v
+../src/accum.v
+../src/adr.v
+../src/clk_gen.v
+../src/datactl.v
+../src/machine.v
+../src/register.v
+../src/alu.v
+../src/counter.v
+../src/machinectl.v
+foreach rtlfile $RTLFileList {
+      			analyze -f sverilog  ../../src/$rtlfile
+ 	}
+Running PRESTO HDLC
+Compiling source file ../../src/../src/cpu.v
+Warning:  ../../src/../src/cpu.v:6: Port data is implicitly typed  (VER-987)
+Warning:  ../../src/../src/cpu.v:7: Port addr is implicitly typed  (VER-987)
+Presto compilation completed successfully.
+Loading db file '/home1/chengjinhui/risc_cpu/syn/lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db'
+Running PRESTO HDLC
+Compiling source file ../../src/../src/accum.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../src/../src/adr.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../src/../src/clk_gen.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../src/../src/datactl.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../src/../src/machine.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../src/../src/register.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../src/../src/alu.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../src/../src/counter.v
+Presto compilation completed successfully.
+Running PRESTO HDLC
+Compiling source file ../../src/../src/machinectl.v
+Presto compilation completed successfully.
+elaborate $DesignTopName 
+Loading db file '/home/eda/synopsys/dc/O-2018.06-SP1/libraries/syn/gtech.db'
+Loading db file '/home/eda/synopsys/dc/O-2018.06-SP1/libraries/syn/standard.sldb'
+  Loading link library 'scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Loading db file '/home/eda/synopsys/dc/O-2018.06-SP1/libraries/syn/dw_foundation.sldb'
+Elaborated 1 design.
+Current design is now 'cpu'.
+Information: Building the design 'clk_gen'. (HDL-193)
+
+Statistics for case statements in always block at line 20 in file
+	'../../src/../src/clk_gen.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            31            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine clk_gen line 20 in file
+		'../../src/../src/clk_gen.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      fetch_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     alu_clk_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'register'. (HDL-193)
+Warning:  ../../src/../src/register.v:19: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 8 in file
+	'../../src/../src/register.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            19            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine register line 8 in file
+		'../../src/../src/register.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|   opc_iraddr_reg    | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'accum'. (HDL-193)
+
+Inferred memory devices in process
+	in routine accum line 7 in file
+		'../../src/../src/accum.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      accum_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'alu'. (HDL-193)
+Warning:  ../../src/../src/alu.v:22: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 20 in file
+	'../../src/../src/alu.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            22            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine alu line 20 in file
+		'../../src/../src/alu.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     alu_out_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'machinectl'. (HDL-193)
+
+Inferred memory devices in process
+	in routine machinectl line 6 in file
+		'../../src/../src/machinectl.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       ena_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'machine'. (HDL-193)
+Warning:  ../../src/../src/machine.v:34: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 19 in file
+	'../../src/../src/machine.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            34            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine machine line 19 in file
+		'../../src/../src/machine.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   datactl_ena_reg   | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      state_reg      | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|       rd_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     inc_pc_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|    load_acc_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     load_pc_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      halt_reg       | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|       wr_reg        | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     load_ir_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'datactl'. (HDL-193)
+
+Inferred tri-state devices in process
+	in routine datactl line 6 in file
+		'../../src/../src/datactl.v'.
+============================================
+| Register Name |       Type       | Width |
+============================================
+|   data_tri    | Tri-State Buffer |   8   |
+============================================
+Presto compilation completed successfully.
+Information: Building the design 'adr'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'counter'. (HDL-193)
+
+Inferred memory devices in process
+	in routine counter line 7 in file
+		'../../src/../src/counter.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     pc_addr_reg     | Flip-flop |  13   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+1
+current_design 	$DesignTopName
+Current design is 'cpu'.
+{cpu}
+link
+
+  Linking design 'cpu'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (10 designs)              /home1/chengjinhui/risc_cpu/syn/exec/cpu.db, etc
+  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic (library) /home1/chengjinhui/risc_cpu/syn/lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db
+
+1
+uniquify
+1
+set_svf ../work/$DesignTopName.svf
+1
+#################################################################
+#    constant 
+#################################################################
+create_clock -name clk [get_port clk] -period  5.0 -waveform {0 2.5}
+1
+set_clock_uncertainty -setup 0.25  [get_clocks clk]
+1
+set_clock_uncertainty -hold  0.15  [get_clocks clk]
+1
+set_dont_touch_network		   [get_clocks clk]
+1
+#	set_ideal_network 		   [get_ports clk]
+#	set_drive 		     0     [get_ports clk]
+#################################################################
+#    input_delay output_delay and  load
+#################################################################
+set   CLK_NAME	     clk  
+clk
+set   ALL_IN_EXCEPT_CLK [remove_from_collection [all_inputs] [get_ports "$CLK_NAME"]]
+{reset data[7] data[6] data[5] data[4] data[3] data[2] data[1] data[0]}
+set_input_delay        1.5   -clock  $CLK_NAME     $ALL_IN_EXCEPT_CLK
+1
+set_output_delay       0.75  -clock $CLK_NAME [all_outputs]
+1
+set_load       1     [all_inputs]
+1
+set_load       1     [all_outputs]
+1
+set_load  -min 0.5   [all_inputs]
+1
+set_load  -min 0.5   [all_outputs]    
+1
+###########################################################
+# Set DRC constraint
+###########################################################
+set_max_transition 	0.2 	[current_design]
+Current design is 'cpu'.
+1
+set_max_fanout 		20 	[current_design]
+Current design is 'cpu'.
+1
+set_max_capacitance 	2	[current_design]
+Current design is 'cpu'.
+1
+set_fix_multiple_port_nets -all  -buffer_constants
+1
+set_auto_disable_drc_nets -clock true -constant true
+1
+current_design	$DesignTopName
+Current design is 'cpu'.
+{cpu}
+link
+
+  Linking design 'cpu'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (10 designs)              /home1/chengjinhui/risc_cpu/syn/exec/cpu.db, etc
+  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic (library) /home1/chengjinhui/risc_cpu/syn/lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db
+
+1
+echo "set cost priority open pandora box"
+set cost priority open pandora box
+compile	 -map high
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.1 |     *     |
+| Licensed DW Building Blocks        | O-2018.06-DWBB_201806.1 |     *     |
+============================================================================
+
+
+Information: There are 10 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'counter'
+  Processing 'adr'
+  Processing 'datactl'
+  Processing 'machine'
+  Processing 'machinectl'
+  Processing 'alu'
+  Processing 'accum'
+  Processing 'register'
+  Processing 'clk_gen'
+  Processing 'cpu'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'counter_DW01_inc_0'
+  Processing 'alu_DW01_add_0'
+
+  Beginning Mapping Optimizations  (High effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     473.8      0.00       0.0      65.2                          
+    0:00:02     473.8      0.00       0.0      65.2                          
+    0:00:02     473.8      0.00       0.0      65.2                          
+    0:00:02     473.8      0.00       0.0      65.2                          
+    0:00:02     473.8      0.00       0.0      65.2                          
+    0:00:02     327.3      0.00       0.0      65.0                          
+    0:00:02     327.2      0.00       0.0      65.0                          
+    0:00:02     327.2      0.00       0.0      65.0                          
+    0:00:02     327.2      0.00       0.0      65.0                          
+    0:00:02     327.2      0.00       0.0      65.0                          
+    0:00:02     327.2      0.00       0.0      65.0                          
+    0:00:02     327.2      0.00       0.0      65.0                          
+    0:00:02     336.3      0.00       0.0      58.9                          
+    0:00:02     341.8      0.00       0.0      54.8                          
+    0:00:02     347.4      0.00       0.0      50.8                          
+    0:00:02     352.9      0.00       0.0      46.7                          
+    0:00:02     358.5      0.00       0.0      42.6                          
+    0:00:02     364.0      0.00       0.0      38.5                          
+    0:00:03     369.6      0.00       0.0      34.5                          
+    0:00:03     371.6      0.00       0.0      32.5                          
+    0:00:03     373.6      0.00       0.0      30.5                          
+    0:00:03     373.6      0.00       0.0      30.5                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03     373.6      0.00       0.0      30.5                          
+    0:00:03     373.6      0.00       0.0      30.5                          
+    0:00:03     373.6      0.00       0.0      30.5                          
+
+
+  Beginning Design Rule Fixing  (max_transition)  (max_fanout)  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03     373.6      0.00       0.0      30.5                          
+    0:00:03     398.0      0.00       0.0       7.0 reset                    
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:03     398.0      0.00       0.0       7.0                          
+    0:00:03     398.0      0.00       0.0       7.0                          
+    0:00:03     385.2      0.00       0.0       7.0                          
+    0:00:03     384.4      0.00       0.0       7.0                          
+    0:00:03     384.0      0.00       0.0       7.0                          
+    0:00:03     384.0      0.00       0.0       7.0                          
+    0:00:03     384.0      0.00       0.0       7.0                          
+    0:00:03     384.0      0.00       0.0       7.0                          
+    0:00:03     383.9      0.00       0.0       7.0                          
+    0:00:03     383.9      0.00       0.0       7.0                          
+    0:00:03     383.9      0.00       0.0       7.0                          
+    0:00:03     383.9      0.00       0.0       7.0                          
+    0:00:03     383.9      0.00       0.0       7.0                          
+    0:00:03     383.9      0.00       0.0       7.0                          
+    0:00:03     383.9      0.00       0.0       7.0                          
+Loading db file '/home1/chengjinhui/risc_cpu/syn/lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+compile	 -inc
+Warning: The following synthetic libraries should be added to 
+	the list of link libraries: 
+	'dw_foundation.sldb'. (UISN-26)
+
+Information: There are 10 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+  Selecting implementations
+  Selecting implementations
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     383.9      0.00       0.0       7.0                          
+    0:00:00     383.9      0.00       0.0       7.0                          
+    0:00:00     383.9      0.00       0.0       7.0                          
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     383.9      0.00       0.0       7.0                          
+Loading db file '/home1/chengjinhui/risc_cpu/syn/lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+#################################################################
+#    set library and synthesis variables
+#################################################################
+write 		-f verilog	-hier 	-output ../work/$DesignTopName.v
+Writing verilog file '/home1/chengjinhui/risc_cpu/syn/work/cpu.v'.
+1
+write_sdc  					../work/$DesignTopName.sdc
+1
+write_sdf					../work/$DesignTopName.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home1/chengjinhui/risc_cpu/syn/work/cpu.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+set_svf -off
+1
+report_constraint -all 
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : cpu
+Version: O-2018.06-SP1
+Date   : Tue Jun 15 10:42:41 2021
+****************************************
+
+
+   min_delay/hold ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   m_register/state_reg/D       0.15           0.09 f        -0.06  (VIOLATED)
+   m_clk_gen/alu_clk_reg/D      0.16           0.10 r        -0.06  (VIOLATED)
+   m_clk_gen/state_reg[7]/D     0.14           0.08 f        -0.06  (VIOLATED)
+   m_clk_gen/state_reg[5]/D     0.14           0.09 f        -0.05  (VIOLATED)
+   m_clk_gen/state_reg[3]/D     0.14           0.09 f        -0.05  (VIOLATED)
+   m_clk_gen/state_reg[2]/D     0.16           0.11 r        -0.05  (VIOLATED)
+   m_clk_gen/state_reg[1]/D     0.16           0.11 r        -0.05  (VIOLATED)
+   m_clk_gen/fetch_reg/D        0.16           0.11 r        -0.05  (VIOLATED)
+   m_machine/state_reg[0]/D     0.16           0.11 r        -0.05  (VIOLATED)
+   m_machine/wr_reg/D           0.16           0.12 r        -0.04  (VIOLATED)
+   m_machine/state_reg[1]/D     0.16           0.12 r        -0.04  (VIOLATED)
+   m_machine/load_ir_reg/D      0.14           0.10 f        -0.04  (VIOLATED)
+   m_clk_gen/state_reg[6]/D     0.15           0.11 r        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[0]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[1]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[2]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[3]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[4]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[5]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[6]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[7]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[8]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[12]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[9]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[10]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[11]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_machine/state_reg[2]/D     0.16           0.12 r        -0.03  (VIOLATED)
+   m_clk_gen/state_reg[0]/D     0.14           0.11 f        -0.03  (VIOLATED)
+   m_machine/load_pc_reg/D      0.14           0.12 f        -0.03  (VIOLATED)
+   m_clk_gen/state_reg[4]/D     0.14           0.12 f        -0.02  (VIOLATED)
+   m_register/opc_iraddr_reg[14]/D
+                                0.15           0.13 f        -0.02  (VIOLATED)
+   m_machine/rd_reg/D           0.16           0.14 r        -0.02  (VIOLATED)
+   m_machine/datactl_ena_reg/D
+                                0.14           0.12 f        -0.02  (VIOLATED)
+   m_machine/halt_reg/D         0.14           0.12 f        -0.02  (VIOLATED)
+   m_machine/inc_pc_reg/D       0.14           0.13 f        -0.02  (VIOLATED)
+   m_machine/load_acc_reg/D     0.14           0.13 f        -0.02  (VIOLATED)
+   m_register/opc_iraddr_reg[13]/D
+                                0.15           0.14 f        -0.01  (VIOLATED)
+   m_register/opc_iraddr_reg[15]/D
+                                0.15           0.14 f         0.00  (VIOLATED: increase significant digits)
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   data[0]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[0]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[0]          0.20           0.67          -0.47  (VIOLATED)
+   data[1]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[1]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[1]          0.20           0.67          -0.47  (VIOLATED)
+   data[2]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[2]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[2]          0.20           0.67          -0.47  (VIOLATED)
+   data[3]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[3]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[3]          0.20           0.67          -0.47  (VIOLATED)
+   data[4]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[4]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[4]          0.20           0.67          -0.47  (VIOLATED)
+   data[5]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[5]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[5]          0.20           0.67          -0.47  (VIOLATED)
+   data[6]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[6]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[6]          0.20           0.67          -0.47  (VIOLATED)
+   data[7]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[7]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[7]          0.20           0.67          -0.47  (VIOLATED)
+   addr[0]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U30/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[0]          0.20           0.40          -0.20  (VIOLATED)
+   addr[1]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U28/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[1]          0.20           0.40          -0.20  (VIOLATED)
+   addr[2]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U26/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[2]          0.20           0.40          -0.20  (VIOLATED)
+   addr[3]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U24/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[3]          0.20           0.40          -0.20  (VIOLATED)
+   addr[4]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U22/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[4]          0.20           0.40          -0.20  (VIOLATED)
+   addr[5]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U20/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[5]          0.20           0.40          -0.20  (VIOLATED)
+   addr[6]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U17/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[6]          0.20           0.40          -0.20  (VIOLATED)
+   addr[7]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U15/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[7]          0.20           0.40          -0.20  (VIOLATED)
+   addr[8]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U13/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[8]          0.20           0.40          -0.20  (VIOLATED)
+   addr[9]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U12/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[9]          0.20           0.40          -0.20  (VIOLATED)
+   addr[10]                     0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U9/Z       0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[10]         0.20           0.40          -0.20  (VIOLATED)
+   addr[11]                     0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U10/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[11]         0.20           0.40          -0.20  (VIOLATED)
+   addr[12]                     0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U11/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[12]         0.20           0.40          -0.20  (VIOLATED)
+   halt                         0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_machine/U11/Z
+                                0.20           0.40          -0.20  (VIOLATED)
+       PORT :  halt             0.20           0.40          -0.20  (VIOLATED)
+   rd                           0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_machine/U10/Z
+                                0.20           0.40          -0.20  (VIOLATED)
+       PORT :  rd               0.20           0.40          -0.20  (VIOLATED)
+   wr                           0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_machine/U12/Z
+                                0.20           0.40          -0.20  (VIOLATED)
+       PORT :  wr               0.20           0.40          -0.20  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      24                 -7.00  
+
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : cpu
+Version: O-2018.06-SP1
+Date   : Tue Jun 15 10:42:41 2021
+****************************************
+
+Operating Conditions: ss_v0p81_125c   Library: scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: reset (input port clocked by clk)
+  Endpoint: m_register/opc_iraddr_reg[8]
+            (rising edge-triggered flip-flop clocked by clk')
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    1.50       1.50 r
+  reset (in)                                              0.00       1.50 r
+  U1/ZN (INV0_140P9T35R)                                  0.01       1.51 f
+  U2/ZN (INV0_140P9T35R)                                  0.04       1.54 r
+  m_register/rst (register)                               0.00       1.54 r
+  m_register/U32/ZN (NAND2XBV1_140P9T35R)                 0.05       1.59 r
+  m_register/U15/ZN (NOR2CV2_140P9T35R)                   0.02       1.60 f
+  m_register/U14/ZN (NOR2CV2_140P9T35R)                   0.06       1.66 r
+  m_register/U12/Z (OR2V1RD_140P9T35R)                    0.05       1.72 r
+  m_register/U24/ZN (OAI2BB2V0_140P9T35R)                 0.02       1.74 f
+  m_register/opc_iraddr_reg[8]/D (DQV0_140P9T35R)         0.00       1.74 f
+  data arrival time                                                  1.74
+
+  clock clk' (rise edge)                                  2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  clock uncertainty                                      -0.25       2.25
+  m_register/opc_iraddr_reg[8]/CK (DQV0_140P9T35R)        0.00       2.25 r
+  library setup time                                     -0.02       2.23
+  data required time                                                 2.23
+  --------------------------------------------------------------------------
+  data required time                                                 2.23
+  data arrival time                                                 -1.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.49
+
+
+1
+#################################################################
+#    set library and synthesis variables
+#################################################################
+redirect [file join ../rpts reportdesign.rpt] 		{ report_design }
+redirect [file join ../rpts reportcell.rpt]    		{ report_cell   }
+redirect [file join ../rpts reportarea.rpt]    		{ report_area   }
+redirect [file join ../rpts reportQOR.rpt]     		{ report_qor    }
+redirect [file join ../rpts reportcheckdesign.rpt]  	{ check_design  }
+redirect [file join ../rpts reporttiming.rpt]    	{ check_timing  }
+redirect [file join ../rpts reportconstraint.rpt]       { report_constraint -all_violators}
+redirect [file join ../rpts reporttimingmax.rpt]        { report_timing -delay_type max   }
+redirect [file join ../rpts reporttimingmin.rpt]    	{ report_timing -delay_type min   }
+###############################################################
+#    end 
+#################################################################
+dc_shell> exit
+
+Memory usage for main task 392 Mbytes.
+Memory usage for this session 392 Mbytes.
+CPU usage for this session 11 seconds ( 0.00 hours ).
+
+Thank you...

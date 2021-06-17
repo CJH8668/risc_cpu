@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : cpu
+Version: O-2018.06-SP1
+Date   : Tue Jun 15 10:42:41 2021
+****************************************
+
+Operating Conditions: ss_v0p81_125c   Library: scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+Wire Load Model Mode: top
+
+  Startpoint: m_register/state_reg
+              (rising edge-triggered flip-flop clocked by clk')
+  Endpoint: m_register/state_reg
+            (rising edge-triggered flip-flop clocked by clk')
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk' (rise edge)                                  2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  m_register/state_reg/CK (DQV0_140P9T35R)                0.00       2.50 r
+  m_register/state_reg/Q (DQV0_140P9T35R)                 0.07       2.57 r
+  m_register/U15/ZN (NOR2CV2_140P9T35R)                   0.01       2.59 f
+  m_register/state_reg/D (DQV0_140P9T35R)                 0.00       2.59 f
+  data arrival time                                                  2.59
+
+  clock clk' (rise edge)                                  2.50       2.50
+  clock network delay (ideal)                             0.00       2.50
+  clock uncertainty                                       0.15       2.65
+  m_register/state_reg/CK (DQV0_140P9T35R)                0.00       2.65 r
+  library hold time                                       0.00       2.65
+  data required time                                                 2.65
+  --------------------------------------------------------------------------
+  data required time                                                 2.65
+  data arrival time                                                 -2.59
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.06
+
+
+1

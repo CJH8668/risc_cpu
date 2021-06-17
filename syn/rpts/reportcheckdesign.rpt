@@ -1,0 +1,27 @@
+ 
+****************************************
+check_design summary:
+Version:     O-2018.06-SP1
+Date:        Tue Jun 15 10:42:41 2021
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      2
+    Unconnected ports (LINT-28)                                     2
+
+Tristate                                                            8
+    Single tristate driver drives an input pin (LINT-63)            8
+--------------------------------------------------------------------------------
+
+Warning: In design 'alu_DW01_add_0', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'alu_DW01_add_0', port 'CO' is not connected to any nets. (LINT-28)
+Warning: Net 'data[0]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'data[1]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'data[2]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'data[3]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'data[4]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'data[5]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'data[6]' has a single tri-state driver.  (LINT-63)
+Warning: Net 'data[7]' has a single tri-state driver.  (LINT-63)
+1

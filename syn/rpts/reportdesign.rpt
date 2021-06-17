@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : design
+Design : cpu
+Version: O-2018.06-SP1
+Date   : Tue Jun 15 10:42:41 2021
+****************************************
+
+Design allows ideal nets on clock nets.
+Design allows ideal nets on constant nets.
+
+Library(s) Used:
+
+    scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic (File: /home1/chengjinhui/risc_cpu/syn/lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db)
+
+Local Link Library:
+
+    {../lib/scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db}
+
+Flip-Flop Types:
+
+    No flip-flop types specified.
+
+Latch Types:
+
+    No latch types specified.
+
+Operating Conditions:
+
+
+    Operating Condition Name : ss_v0p81_125c
+    Library : scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+    Process :   1.00
+    Temperature : 125.00
+    Voltage :   0.81
+    Interconnect Model : balanced_tree
+
+Wire Loading Model:
+
+    No wire loading specified.
+
+
+Wire Loading Model Mode: top.
+
+Timing Ranges:
+
+    No timing ranges specified.
+
+Pin Input Delays:
+
+    None specified.
+
+Pin Output Delays:
+
+    None specified.
+
+Disabled Timing Arcs:
+
+    No arcs disabled.
+
+Required Licenses:
+
+    None Required
+
+Design Parameters:
+
+    None specified.
+1

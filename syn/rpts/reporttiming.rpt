@@ -1,0 +1,49 @@
+
+Information: Checking generated_clocks...
+
+Information: Checking loops...
+
+Information: Checking no_input_delay...
+
+Information: Checking unconstrained_endpoints...
+
+Warning: The following end-points are not constrained for maximum delay.
+
+End point
+---------------
+m_accum/accum_reg[0]/D
+m_accum/accum_reg[1]/D
+m_accum/accum_reg[2]/D
+m_accum/accum_reg[3]/D
+m_accum/accum_reg[4]/D
+m_accum/accum_reg[5]/D
+m_accum/accum_reg[6]/D
+m_accum/accum_reg[7]/D
+m_alu/alu_out_reg[0]/D
+m_alu/alu_out_reg[1]/D
+m_alu/alu_out_reg[2]/D
+m_alu/alu_out_reg[3]/D
+m_alu/alu_out_reg[4]/D
+m_alu/alu_out_reg[5]/D
+m_alu/alu_out_reg[6]/D
+m_alu/alu_out_reg[7]/D
+m_counter/pc_addr_reg[0]/D
+m_counter/pc_addr_reg[1]/D
+m_counter/pc_addr_reg[2]/D
+m_counter/pc_addr_reg[3]/D
+m_counter/pc_addr_reg[4]/D
+m_counter/pc_addr_reg[5]/D
+m_counter/pc_addr_reg[6]/D
+m_counter/pc_addr_reg[7]/D
+m_counter/pc_addr_reg[8]/D
+m_counter/pc_addr_reg[9]/D
+m_counter/pc_addr_reg[10]/D
+m_counter/pc_addr_reg[11]/D
+m_counter/pc_addr_reg[12]/D
+
+Information: Checking pulse_clock_cell_type...
+
+Information: Checking no_driving_cell...
+
+Information: Checking partial_input_delay...
+1

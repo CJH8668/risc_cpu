@@ -1,0 +1,73 @@
+ 
+****************************************
+Report : cell
+Design : cpu
+Version: O-2018.06-SP1
+Date   : Tue Jun 15 10:42:41 2021
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U1                        INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U2                        INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U3                        INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U4                        CLKINV4_140P9T35R
+                                          scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U5                        INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U6                        CLKINV4_140P9T35R
+                                          scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U7                        INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U8                        CLKINV4_140P9T35R
+                                          scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U9                        INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U10                       CLKINV4_140P9T35R
+                                          scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U11                       INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U12                       CLKINV4_140P9T35R
+                                          scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U13                       INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U14                       CLKINV4_140P9T35R
+                                          scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U15                       INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U16                       CLKINV4_140P9T35R
+                                          scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U17                       INV0_140P9T35R  scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+U18                       CLKINV4_140P9T35R
+                                          scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic
+                                                          0.378000  
+m_accum                   accum                           28.602001 h, n
+m_adr                     adr                             50.400000 h
+m_alu                     alu                             66.654000 h, n
+m_clk_gen                 clk_gen                         39.564000 h, n
+m_counter                 counter                         59.598000 h, n
+m_datactl                 datactl                         24.191999 h, n
+m_machine                 machine                         50.652000 h, n
+m_machinectl              machinectl                      2.898000  h, n
+m_register                register                        54.557999 h, n
+--------------------------------------------------------------------------------
+Total 27 cells                                            383.921999
+1

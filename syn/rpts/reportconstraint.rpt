@@ -1,0 +1,165 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : cpu
+Version: O-2018.06-SP1
+Date   : Tue Jun 15 10:42:41 2021
+****************************************
+
+
+   min_delay/hold ('clk' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   m_register/state_reg/D       0.15           0.09 f        -0.06  (VIOLATED)
+   m_clk_gen/alu_clk_reg/D      0.16           0.10 r        -0.06  (VIOLATED)
+   m_clk_gen/state_reg[7]/D     0.14           0.08 f        -0.06  (VIOLATED)
+   m_clk_gen/state_reg[5]/D     0.14           0.09 f        -0.05  (VIOLATED)
+   m_clk_gen/state_reg[3]/D     0.14           0.09 f        -0.05  (VIOLATED)
+   m_clk_gen/state_reg[2]/D     0.16           0.11 r        -0.05  (VIOLATED)
+   m_clk_gen/state_reg[1]/D     0.16           0.11 r        -0.05  (VIOLATED)
+   m_clk_gen/fetch_reg/D        0.16           0.11 r        -0.05  (VIOLATED)
+   m_machine/state_reg[0]/D     0.16           0.11 r        -0.05  (VIOLATED)
+   m_machine/wr_reg/D           0.16           0.12 r        -0.04  (VIOLATED)
+   m_machine/state_reg[1]/D     0.16           0.12 r        -0.04  (VIOLATED)
+   m_machine/load_ir_reg/D      0.14           0.10 f        -0.04  (VIOLATED)
+   m_clk_gen/state_reg[6]/D     0.15           0.11 r        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[0]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[1]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[2]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[3]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[4]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[5]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[6]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[7]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[8]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[12]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[9]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[10]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_register/opc_iraddr_reg[11]/D
+                                0.15           0.11 f        -0.04  (VIOLATED)
+   m_machine/state_reg[2]/D     0.16           0.12 r        -0.03  (VIOLATED)
+   m_clk_gen/state_reg[0]/D     0.14           0.11 f        -0.03  (VIOLATED)
+   m_machine/load_pc_reg/D      0.14           0.12 f        -0.03  (VIOLATED)
+   m_clk_gen/state_reg[4]/D     0.14           0.12 f        -0.02  (VIOLATED)
+   m_register/opc_iraddr_reg[14]/D
+                                0.15           0.13 f        -0.02  (VIOLATED)
+   m_machine/rd_reg/D           0.16           0.14 r        -0.02  (VIOLATED)
+   m_machine/datactl_ena_reg/D
+                                0.14           0.12 f        -0.02  (VIOLATED)
+   m_machine/halt_reg/D         0.14           0.12 f        -0.02  (VIOLATED)
+   m_machine/inc_pc_reg/D       0.14           0.13 f        -0.02  (VIOLATED)
+   m_machine/load_acc_reg/D     0.14           0.13 f        -0.02  (VIOLATED)
+   m_register/opc_iraddr_reg[13]/D
+                                0.15           0.14 f        -0.01  (VIOLATED)
+   m_register/opc_iraddr_reg[15]/D
+                                0.15           0.14 f         0.00  (VIOLATED: increase significant digits)
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   data[0]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[0]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[0]          0.20           0.67          -0.47  (VIOLATED)
+   data[1]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[1]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[1]          0.20           0.67          -0.47  (VIOLATED)
+   data[2]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[2]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[2]          0.20           0.67          -0.47  (VIOLATED)
+   data[3]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[3]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[3]          0.20           0.67          -0.47  (VIOLATED)
+   data[4]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[4]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[4]          0.20           0.67          -0.47  (VIOLATED)
+   data[5]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[5]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[5]          0.20           0.67          -0.47  (VIOLATED)
+   data[6]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[6]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[6]          0.20           0.67          -0.47  (VIOLATED)
+   data[7]                      0.20           0.67          -0.47  (VIOLATED)
+       PIN :   m_datactl/data_tri[7]/Z
+                                0.20           0.67          -0.47  (VIOLATED)
+       PORT :  data[7]          0.20           0.67          -0.47  (VIOLATED)
+   addr[0]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U30/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[0]          0.20           0.40          -0.20  (VIOLATED)
+   addr[1]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U28/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[1]          0.20           0.40          -0.20  (VIOLATED)
+   addr[2]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U26/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[2]          0.20           0.40          -0.20  (VIOLATED)
+   addr[3]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U24/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[3]          0.20           0.40          -0.20  (VIOLATED)
+   addr[4]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U22/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[4]          0.20           0.40          -0.20  (VIOLATED)
+   addr[5]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U20/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[5]          0.20           0.40          -0.20  (VIOLATED)
+   addr[6]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U17/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[6]          0.20           0.40          -0.20  (VIOLATED)
+   addr[7]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U15/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[7]          0.20           0.40          -0.20  (VIOLATED)
+   addr[8]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U13/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[8]          0.20           0.40          -0.20  (VIOLATED)
+   addr[9]                      0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U12/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[9]          0.20           0.40          -0.20  (VIOLATED)
+   addr[10]                     0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U9/Z       0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[10]         0.20           0.40          -0.20  (VIOLATED)
+   addr[11]                     0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U10/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[11]         0.20           0.40          -0.20  (VIOLATED)
+   addr[12]                     0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_adr/U11/Z      0.20           0.40          -0.20  (VIOLATED)
+       PORT :  addr[12]         0.20           0.40          -0.20  (VIOLATED)
+   halt                         0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_machine/U11/Z
+                                0.20           0.40          -0.20  (VIOLATED)
+       PORT :  halt             0.20           0.40          -0.20  (VIOLATED)
+   rd                           0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_machine/U10/Z
+                                0.20           0.40          -0.20  (VIOLATED)
+       PORT :  rd               0.20           0.40          -0.20  (VIOLATED)
+   wr                           0.20           0.40          -0.20  (VIOLATED)
+       PIN :   m_machine/U12/Z
+                                0.20           0.40          -0.20  (VIOLATED)
+       PORT :  wr               0.20           0.40          -0.20  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      24                 -7.00  
+
+1

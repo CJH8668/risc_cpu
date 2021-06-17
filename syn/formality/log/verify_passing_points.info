@@ -1,0 +1,336 @@
+**************************************************
+Report         : passing_points
+
+Reference      : r:/DESIGN_LIB/cpu
+Implementation : i:/DESIGN_LIB/cpu
+Version        : O-2018.06-SP3
+Date           : Tue Jun 15 10:57:17 2021
+**************************************************
+
+100 Passing compare points:
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_accum/accum_reg[0]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_accum/accum_reg[0]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_accum/accum_reg[1]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_accum/accum_reg[1]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_accum/accum_reg[2]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_accum/accum_reg[2]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_accum/accum_reg[3]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_accum/accum_reg[3]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_accum/accum_reg[4]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_accum/accum_reg[4]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_accum/accum_reg[5]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_accum/accum_reg[5]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_accum/accum_reg[6]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_accum/accum_reg[6]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_accum/accum_reg[7]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_accum/accum_reg[7]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_alu/alu_out_reg[0]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_alu/alu_out_reg[0]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_alu/alu_out_reg[1]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_alu/alu_out_reg[1]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_alu/alu_out_reg[2]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_alu/alu_out_reg[2]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_alu/alu_out_reg[3]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_alu/alu_out_reg[3]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_alu/alu_out_reg[4]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_alu/alu_out_reg[4]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_alu/alu_out_reg[5]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_alu/alu_out_reg[5]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_alu/alu_out_reg[6]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_alu/alu_out_reg[6]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_alu/alu_out_reg[7]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_alu/alu_out_reg[7]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/alu_clk_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/alu_clk_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/fetch_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/fetch_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/state_reg[0]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/state_reg[0]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/state_reg[1]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/state_reg[1]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/state_reg[2]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/state_reg[2]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/state_reg[3]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/state_reg[3]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/state_reg[4]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/state_reg[4]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/state_reg[5]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/state_reg[5]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/state_reg[6]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/state_reg[6]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_clk_gen/state_reg[7]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_clk_gen/state_reg[7]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[0]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[0]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[10]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[10]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[11]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[11]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[12]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[12]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[1]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[1]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[2]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[2]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[3]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[3]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[4]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[4]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[5]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[5]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[6]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[6]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[7]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[7]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[8]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[8]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[9]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_counter/pc_addr_reg[9]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/datactl_ena_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/datactl_ena_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/halt_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/halt_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/inc_pc_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/inc_pc_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/load_acc_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/load_acc_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/load_ir_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/load_ir_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/load_pc_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/load_pc_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/rd_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/rd_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/state_reg[0]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/state_reg[0]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/state_reg[1]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/state_reg[1]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/state_reg[2]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/state_reg[2]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machine/wr_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machine/wr_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_machinectl/ena_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_machinectl/ena_reg
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[0]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[0]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[10]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[10]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[11]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[11]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[12]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[12]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[13]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[13]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[14]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[14]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[15]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[15]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[1]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[1]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[2]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[2]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[3]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[3]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[4]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[4]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[5]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[5]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[6]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[6]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[7]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[7]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[8]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[8]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[9]
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/opc_iraddr_reg[9]
+
+  Ref  DFF        r:/DESIGN_LIB/cpu/m_register/state_reg
+  Impl DFF        i:/DESIGN_LIB/cpu/m_register/state_reg
+
+  Ref  BBNet      r:/DESIGN_LIB/cpu/data[0]
+  Impl BBNet      i:/DESIGN_LIB/cpu/data[0]
+
+  Ref  BBNet      r:/DESIGN_LIB/cpu/data[1]
+  Impl BBNet      i:/DESIGN_LIB/cpu/data[1]
+
+  Ref  BBNet      r:/DESIGN_LIB/cpu/data[2]
+  Impl BBNet      i:/DESIGN_LIB/cpu/data[2]
+
+  Ref  BBNet      r:/DESIGN_LIB/cpu/data[3]
+  Impl BBNet      i:/DESIGN_LIB/cpu/data[3]
+
+  Ref  BBNet      r:/DESIGN_LIB/cpu/data[4]
+  Impl BBNet      i:/DESIGN_LIB/cpu/data[4]
+
+  Ref  BBNet      r:/DESIGN_LIB/cpu/data[5]
+  Impl BBNet      i:/DESIGN_LIB/cpu/data[5]
+
+  Ref  BBNet      r:/DESIGN_LIB/cpu/data[6]
+  Impl BBNet      i:/DESIGN_LIB/cpu/data[6]
+
+  Ref  BBNet      r:/DESIGN_LIB/cpu/data[7]
+  Impl BBNet      i:/DESIGN_LIB/cpu/data[7]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[0]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[0]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[10]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[10]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[11]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[11]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[12]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[12]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[1]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[1]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[2]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[2]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[3]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[3]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[4]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[4]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[5]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[5]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[6]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[6]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[7]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[7]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[8]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[8]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/addr[9]
+  Impl Port       i:/DESIGN_LIB/cpu/addr[9]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/data[0]
+  Impl Port       i:/DESIGN_LIB/cpu/data[0]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/data[1]
+  Impl Port       i:/DESIGN_LIB/cpu/data[1]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/data[2]
+  Impl Port       i:/DESIGN_LIB/cpu/data[2]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/data[3]
+  Impl Port       i:/DESIGN_LIB/cpu/data[3]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/data[4]
+  Impl Port       i:/DESIGN_LIB/cpu/data[4]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/data[5]
+  Impl Port       i:/DESIGN_LIB/cpu/data[5]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/data[6]
+  Impl Port       i:/DESIGN_LIB/cpu/data[6]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/data[7]
+  Impl Port       i:/DESIGN_LIB/cpu/data[7]
+
+  Ref  Port       r:/DESIGN_LIB/cpu/halt
+  Impl Port       i:/DESIGN_LIB/cpu/halt
+
+  Ref  Port       r:/DESIGN_LIB/cpu/rd
+  Impl Port       i:/DESIGN_LIB/cpu/rd
+
+  Ref  Port       r:/DESIGN_LIB/cpu/wr
+  Impl Port       i:/DESIGN_LIB/cpu/wr
+
+ [BBNet: multiply-driven net
+  BBPin: black-box pin
+  Cut:   cut-point
+  DFF:   non-constant DFF register
+  DFF0:  constant 0 DFF register
+  DFF1:  constant 1 DFF register
+  DFFX:  constant X DFF register
+  DFF0X: constrained 0X DFF register
+  DFF1X: constrained 1X DFF register
+  LAT:   non-constant latch register
+  LAT0:  constant 0 latch register
+  LAT1:  constant 1 latch register
+  LATX:  constant X latch register
+  LAT0X: constrained 0X latch register
+  LAT1X: constrained 1X latch register
+  LATCG: clock-gating latch register
+  TLA:   transparent latch register
+  TLA0X: transparent constrained 0X latch register
+  TLA1X: transparent constrained 1X latch register
+  Loop:  cycle break point
+  Port:  primary (top-level) port
+  Und:   undriven signal cut-point
+  Unk:   unknown signal cut-point]
+
+1
