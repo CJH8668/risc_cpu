@@ -85,13 +85,13 @@
     建议使用VMware 16,低版本可能存在兼容性问题。链接：https://pan.baidu.com/s/1ryNqMByWATJhFZ4Rf5lCVA       提取码：nj60 
     具体使用到的开发工具及简要说明如下，详细操作请阅读各软件user guide。（链接：https://pan.baidu.com/s/1n5tCIHcrevwKp5lGvMdN6w   提取码：6e0z）
   
-    |  工具 | 说明   |
-    |:-|:-|
-    | VCS                 | 仿真工具，用来compile rtl源代码，并且生成二进制simulate文件；|
-    | Verdi & DVE         | debug工具，用来查看仿真波形；                               |
-    | DC(Design Complier) | 综合工具，产生综合后的门级网表；还可以做简单的STA*           |
-    | PT(Prime Time )     | 静态时序分析（STA）工具，生成相应的时序报告以检查时序约束；   |
-    | Formaliity          | 形式验证工具，compare综合后的门级网表与rtl源码的对应point。  |
+  |  工具 | 说明   |
+  |:-|:-|
+  | VCS                 | 仿真工具，用来compile rtl源代码，并且生成二进制simulate文件；|
+  | Verdi & DVE         | debug工具，用来查看仿真波形；                               |
+  | DC(Design Complier) | 综合工具，产生综合后的门级网表；还可以做简单的STA*           |
+  | PT(Prime Time )     | 静态时序分析（STA）工具，生成相应的时序报告以检查时序约束；   |
+  | Formaliity          | 形式验证工具，compare综合后的门级网表与rtl源码的对应point。  |
 
     *只面向lay-out之前，只考虑各级门延时，未计入布线之后的线载延时
 
@@ -100,11 +100,11 @@
 
     2）在scripts目录下分别生成以下file list：
 
-    |  文件列表文件 | 说明   |
-    |:-|:-|
-    | filelist           | 存放用于DC综合的文件路径（不含testbench及外围非综合模块）；                            |
-    | FileList_netlist.f | 存放用于后仿（综合后门级功能功能）的门级网表，testbench及外围非综合电路模块文件路径；    |
-    | FileList.f         | 存放用于前端RTL级功能仿真的完整源文件路径。              |
+  |  文件列表文件 | 说明   |
+  |:-|:-|
+  | filelist           | 存放用于DC综合的文件路径（不含testbench及外围非综合模块）；                            |
+  | FileList_netlist.f | 存放用于后仿（综合后门级功能功能）的门级网表，testbench及外围非综合电路模块文件路径；    |
+  | FileList.f         | 存放用于前端RTL级功能仿真的完整源文件路径。              |
 
     注：一般将testbench路径置于所有文件路径的末尾。
 
