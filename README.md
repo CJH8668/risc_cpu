@@ -1,6 +1,7 @@
 # 代码管理 数字IC设计前端———使用Git管理synopsys project
 
 ## 0. directory structure；
+```
   / risc_cpu /
              |--- debug/
              |         |--- Makefile
@@ -80,7 +81,6 @@
              \--- README.md
 ```
 .
-├── 1.txt
 ├── debug
 │   └── Makefile
 ├── debug_netlist
