@@ -92,21 +92,29 @@
     | DC(Design Complier)| 综合工具，产生综合后的门级网表；还可以做简单的STA*           |
     | PT(Prime Time )    | 静态时序分析（STA）工具，生成相应的时序报告以检查时序约束；   |
     | Formaliity         | 形式验证工具，compare综合后的门级网表与rtl源码的对应point。  |
+
     *只面向lay-out之前，只考虑各级门延时，未计入布线之后的线载延时
 
 ## 2. project创建
     1）将项目所有用到的RTL源代码及testbench放到src目录下；
+
     2）在scripts目录下分别生成以下file list：
+
     |  文件列表文件 | 说明   |
     |:-|:-|
     | filelist           | 存放用于DC综合的文件路径（不含testbench及外围非综合模块）；|
     | FileList_netlist.f | 存放用于后仿（综合后门级功能功能）的门级网表，testbench及外围非综合电路模块文件路径；|
     | FileList.f         | 存放用于前端RTL级功能仿真的完整源文件路径。|
+
     注：一般将testbench路径置于所有文件路径的末尾。
-    3）本例中，将用于读入CPU，进行功能测试的，C语言编译后的二进制文件存放于test目录下；
-      test1：用于
-      test2:
-      test3:
+
+    3）本例中，将用于读入CPU，进行功能测试的，编译后的二进制文件存放于test目录下；
+      test1: 用于测试risc_cpu的基本指令集，如果该cpu的各条指令执行正确，它应该停在地址为2E(hex)处，在执行HLT时停止运行。
+      test2: 用于测试risc_cpu的高级指令集，如果该cpu的各条指令执行正确，它应该停在地址为20(hex)处，在执行HLT时停止运行。
+      test3: 程序是一个计算从0~144的Fibonacci序列的程序，用于验证risc_cpu的功能。
+      注：以上测试程序是用于验证RISC_CPU逻辑功能的机器代码，是根据汇编语言由人工编译的。
+
+
     4) 在syn目录下，存放有以下文件目录：
       exec：可执行综合的文件 run; 用于综合的TCL脚本 synthesis.tcl；
       formality: 存放用于形式验证的TCL脚本 fm.tcl；
@@ -274,7 +282,16 @@
 
       git push origin dev      ## dev branch
 
-
+## 8. makefile支持的常见操作有：
+  
+  |  命令 | 说明   |
+  |:-|:-|
+  | make com      | 对源代码进行编译，生成二进制simulate文件；          |
+  | make sim      | 生成.fsdb和.vpd波形文件，以完成后续波形的debug；    |
+  | make verdi    | 打开Verdi以完成波形调试；                          |
+  | make debug    | 打开DVE以完成波形调试；                            |
+  | make cov      | 使用DVE以查看代码覆盖率；                          |
+  | make clean    | 清除debug下的全部文件。                            |
 
 
 
