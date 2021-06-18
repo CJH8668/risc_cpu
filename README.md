@@ -103,7 +103,7 @@
   |  文件列表文件 | 说明   |
   |:-|:-|
   | filelist           | 存放用于DC综合的文件路径（不含testbench及外围非综合模块）；                            |
-  | FileList_netlist.f | 存放用于后仿（综合后门级功能功能）的门级网表，testbench及外围非综合电路模块文件路径；    |
+  | FileList_netlist.f | 存放用于后仿（综合后门级功能仿真）的门级网表、testbench及外围非综合电路模块文件路径；    |
   | FileList.f         | 存放用于前端RTL级功能仿真的完整源文件路径。              |
 
     注：一般将testbench路径置于所有文件路径的末尾。
