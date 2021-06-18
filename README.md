@@ -78,7 +78,377 @@
              |
              |--- scc28nhkcp_hsc35p140_rvt.v
              \--- README.md
+.
+├── 1.txt
+├── debug
+│   └── Makefile
+├── debug_netlist
+│   └── Makefile
+├── README.md
+├── scc28nhkcp_hsc35p140_rvt.v
+├── scripts
+│   ├── filelist
+│   ├── FileList.f
+│   └── FileList_netlist.f
+├── src
+│   ├── accum.v
+│   ├── addr_decode.v
+│   ├── adr.v
+│   ├── alu.v
+│   ├── clk_gen.v
+│   ├── counter.v
+│   ├── cputop.v
+│   ├── cpu.v
+│   ├── datactl.v
+│   ├── machinectl.v
+│   ├── machine.v
+│   ├── ram.v
+│   ├── register.v
+│   └── rom.v
+├── syn
+│   ├── exec
+│   │   ├── command.log
+│   │   ├── default.svf
+│   │   ├── run
+│   │   └── synthesis.tcl
+│   ├── formality
+│   │   ├── fm_shell_command1.lck
+│   │   ├── fm_shell_command1.log
+│   │   ├── fm_shell_command2.log
+│   │   ├── fm_shell_command3.lck
+│   │   ├── fm_shell_command3.log
+│   │   ├── fm_shell_command.lck
+│   │   ├── fm_shell_command.log
+│   │   ├── fm.tcl
+│   │   ├── FM_WORK
+│   │   │   ├── fmbxaKDEH
+│   │   │   ├── GTECH
+│   │   │   │   └── GTECH_COMPONENTS.pkg
+│   │   │   │       ├── GTECH_COMPONENTS.dep
+│   │   │   │       ├── GTECH_COMPONENTS.dmp
+│   │   │   │       └── GTECH_COMPONENTS.pbd
+│   │   │   │           ├── GTECH_COMPONENTS.dep
+│   │   │   │           └── GTECH_COMPONENTS.dmp
+│   │   │   ├── i
+│   │   │   │   └── WORK
+│   │   │   │       └── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC.df
+│   │   │   ├── r
+│   │   │   │   ├── DW01
+│   │   │   │   │   └── DW01_COMPONENTS.pkg
+│   │   │   │   │       ├── DW01_COMPONENTS.dep
+│   │   │   │   │       ├── DW01_COMPONENTS.dmp
+│   │   │   │   │       └── DW01_COMPONENTS.pbd
+│   │   │   │   │           ├── DW01_COMPONENTS.dep
+│   │   │   │   │           └── DW01_COMPONENTS.dmp
+│   │   │   │   ├── DW02
+│   │   │   │   │   └── DW02_COMPONENTS.pkg
+│   │   │   │   │       ├── DW02_COMPONENTS.dep
+│   │   │   │   │       ├── DW02_COMPONENTS.dmp
+│   │   │   │   │       └── DW02_COMPONENTS.pbd
+│   │   │   │   │           ├── DW02_COMPONENTS.dep
+│   │   │   │   │           └── DW02_COMPONENTS.dmp
+│   │   │   │   ├── DW03
+│   │   │   │   │   └── DW03_COMPONENTS.pkg
+│   │   │   │   │       ├── DW03_COMPONENTS.dep
+│   │   │   │   │       └── DW03_COMPONENTS.dmp
+│   │   │   │   ├── DW04
+│   │   │   │   │   └── DW04_COMPONENTS.pkg
+│   │   │   │   │       ├── DW04_COMPONENTS.dep
+│   │   │   │   │       ├── DW04_COMPONENTS.dmp
+│   │   │   │   │       └── DW04_COMPONENTS.pbd
+│   │   │   │   │           ├── DW04_COMPONENTS.dep
+│   │   │   │   │           └── DW04_COMPONENTS.dmp
+│   │   │   │   ├── DW05
+│   │   │   │   │   └── DW05_COMPONENTS.pkg
+│   │   │   │   │       ├── DW05_COMPONENTS.dep
+│   │   │   │   │       └── DW05_COMPONENTS.dmp
+│   │   │   │   ├── DW06
+│   │   │   │   │   └── DW06_COMPONENTS.pkg
+│   │   │   │   │       ├── DW06_COMPONENTS.dep
+│   │   │   │   │       └── DW06_COMPONENTS.dmp
+│   │   │   │   ├── DWARE
+│   │   │   │   │   ├── DW_DP_FUNCTIONS_ARITH.pkg
+│   │   │   │   │   │   ├── DW_DP_FUNCTIONS_ARITH.dep
+│   │   │   │   │   │   ├── DW_DP_FUNCTIONS_ARITH.dmp
+│   │   │   │   │   │   └── DW_DP_FUNCTIONS_ARITH.pbd
+│   │   │   │   │   │       ├── DW_DP_FUNCTIONS_ARITH.dep
+│   │   │   │   │   │       └── DW_DP_FUNCTIONS_ARITH.dmp
+│   │   │   │   │   ├── DW_DP_FUNCTIONS.pkg
+│   │   │   │   │   │   ├── DW_DP_FUNCTIONS.dep
+│   │   │   │   │   │   ├── DW_DP_FUNCTIONS.dmp
+│   │   │   │   │   │   └── DW_DP_FUNCTIONS.pbd
+│   │   │   │   │   │       ├── DW_DP_FUNCTIONS.dep
+│   │   │   │   │   │       └── DW_DP_FUNCTIONS.dmp
+│   │   │   │   │   ├── DW_FOUNDATION_ARITH.pkg
+│   │   │   │   │   │   ├── DW_FOUNDATION_ARITH.dep
+│   │   │   │   │   │   ├── DW_FOUNDATION_ARITH.dmp
+│   │   │   │   │   │   └── DW_FOUNDATION_ARITH.pbd
+│   │   │   │   │   │       ├── DW_FOUNDATION_ARITH.dep
+│   │   │   │   │   │       └── DW_FOUNDATION_ARITH.dmp
+│   │   │   │   │   ├── DW_FOUNDATION_COMP_ARITH.pkg
+│   │   │   │   │   │   ├── DW_FOUNDATION_COMP_ARITH.dep
+│   │   │   │   │   │   └── DW_FOUNDATION_COMP_ARITH.dmp
+│   │   │   │   │   ├── DW_FOUNDATION_COMP.pkg
+│   │   │   │   │   │   ├── DW_FOUNDATION_COMP.dep
+│   │   │   │   │   │   └── DW_FOUNDATION_COMP.dmp
+│   │   │   │   │   ├── DW_FOUNDATION.pkg
+│   │   │   │   │   │   ├── DW_FOUNDATION.dep
+│   │   │   │   │   │   ├── DW_FOUNDATION.dmp
+│   │   │   │   │   │   └── DW_FOUNDATION.pbd
+│   │   │   │   │   │       ├── DW_FOUNDATION.dep
+│   │   │   │   │   │       └── DW_FOUNDATION.dmp
+│   │   │   │   │   ├── DWMATH.pkg
+│   │   │   │   │   │   ├── DWMATH.dep
+│   │   │   │   │   │   ├── DWMATH.dmp
+│   │   │   │   │   │   └── DWMATH.pbd
+│   │   │   │   │   │       ├── DWMATH.dep
+│   │   │   │   │   │       └── DWMATH.dmp
+│   │   │   │   │   ├── DWPACKAGES_N.pkg
+│   │   │   │   │   │   ├── DWPACKAGES_N.dep
+│   │   │   │   │   │   ├── DWPACKAGES_N.dmp
+│   │   │   │   │   │   └── DWPACKAGES_N.pbd
+│   │   │   │   │   │       ├── DWPACKAGES_N.dep
+│   │   │   │   │   │       └── DWPACKAGES_N.dmp
+│   │   │   │   │   └── DWPACKAGES.pkg
+│   │   │   │   │       ├── DWPACKAGES.dep
+│   │   │   │   │       ├── DWPACKAGES.dmp
+│   │   │   │   │       └── DWPACKAGES.pbd
+│   │   │   │   │           ├── DWPACKAGES.dep
+│   │   │   │   │           └── DWPACKAGES.dmp
+│   │   │   │   ├── FM_BBOX
+│   │   │   │   └── WORK
+│   │   │   │       ├── accum.mod
+│   │   │   │       │   └── accum.dmp
+│   │   │   │       ├── accum.recent
+│   │   │   │       ├── accum.sns
+│   │   │   │       ├── adr.mod
+│   │   │   │       │   └── adr.dmp
+│   │   │   │       ├── adr.recent
+│   │   │   │       ├── alu.mod
+│   │   │   │       │   └── alu.dmp
+│   │   │   │       ├── alu.recent
+│   │   │   │       ├── alu.sns
+│   │   │   │       ├── clk_gen.mod
+│   │   │   │       │   └── clk_gen.dmp
+│   │   │   │       ├── clk_gen.recent
+│   │   │   │       ├── clk_gen.sns
+│   │   │   │       ├── counter.mod
+│   │   │   │       │   └── counter.dmp
+│   │   │   │       ├── counter.recent
+│   │   │   │       ├── counter.sns
+│   │   │   │       ├── datactl.mod
+│   │   │   │       │   └── datactl.dmp
+│   │   │   │       ├── datactl.recent
+│   │   │   │       ├── datactl.sns
+│   │   │   │       ├── machine0.ss
+│   │   │   │       ├── machine1.ss
+│   │   │   │       ├── machine2.ss
+│   │   │   │       ├── machine3.ss
+│   │   │   │       ├── machinectl.mod
+│   │   │   │       │   └── machinectl.dmp
+│   │   │   │       ├── machinectl.recent
+│   │   │   │       ├── machine.mod
+│   │   │   │       │   └── machine.dmp
+│   │   │   │       ├── machine.recent
+│   │   │   │       ├── machine.sns
+│   │   │   │       ├── machine.ss
+│   │   │   │       ├── register.mod
+│   │   │   │       │   └── register.dmp
+│   │   │   │       ├── register.recent
+│   │   │   │       ├── register.sns
+│   │   │   │       └── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC.df
+│   │   │   ├── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC
+│   │   │   └── svr_tmp_dir
+│   │   ├── FM_WORK1
+│   │   │   ├── fmbaxUgz5
+│   │   │   ├── GTECH
+│   │   │   │   └── GTECH_COMPONENTS.pkg
+│   │   │   │       ├── GTECH_COMPONENTS.dep
+│   │   │   │       ├── GTECH_COMPONENTS.dmp
+│   │   │   │       └── GTECH_COMPONENTS.pbd
+│   │   │   │           ├── GTECH_COMPONENTS.dep
+│   │   │   │           └── GTECH_COMPONENTS.dmp
+│   │   │   ├── i
+│   │   │   │   └── WORK
+│   │   │   │       └── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC.df
+│   │   │   ├── r
+│   │   │   │   ├── FM_BBOX
+│   │   │   │   └── WORK
+│   │   │   │       ├── accum.mod
+│   │   │   │       │   └── accum.dmp
+│   │   │   │       ├── accum.recent
+│   │   │   │       ├── accum.sns
+│   │   │   │       ├── adr.mod
+│   │   │   │       │   └── adr.dmp
+│   │   │   │       ├── adr.recent
+│   │   │   │       ├── alu.mod
+│   │   │   │       │   └── alu.dmp
+│   │   │   │       ├── alu.recent
+│   │   │   │       ├── alu.sns
+│   │   │   │       ├── clk_gen.mod
+│   │   │   │       │   └── clk_gen.dmp
+│   │   │   │       ├── clk_gen.recent
+│   │   │   │       ├── clk_gen.sns
+│   │   │   │       ├── counter.mod
+│   │   │   │       │   └── counter.dmp
+│   │   │   │       ├── counter.recent
+│   │   │   │       ├── counter.sns
+│   │   │   │       ├── datactl.mod
+│   │   │   │       │   └── datactl.dmp
+│   │   │   │       ├── datactl.recent
+│   │   │   │       ├── datactl.sns
+│   │   │   │       ├── machinectl.mod
+│   │   │   │       │   └── machinectl.dmp
+│   │   │   │       ├── machinectl.recent
+│   │   │   │       ├── machine.mod
+│   │   │   │       │   └── machine.dmp
+│   │   │   │       ├── machine.recent
+│   │   │   │       ├── machine.sns
+│   │   │   │       ├── machine.ss
+│   │   │   │       ├── register.mod
+│   │   │   │       │   └── register.dmp
+│   │   │   │       ├── register.recent
+│   │   │   │       ├── register.sns
+│   │   │   │       └── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC.df
+│   │   │   ├── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC
+│   │   │   └── svr_tmp_dir
+│   │   ├── FM_WORK3
+│   │   │   ├── fmbeCHZk5
+│   │   │   ├── GTECH
+│   │   │   │   └── GTECH_COMPONENTS.pkg
+│   │   │   │       ├── GTECH_COMPONENTS.dep
+│   │   │   │       ├── GTECH_COMPONENTS.dmp
+│   │   │   │       └── GTECH_COMPONENTS.pbd
+│   │   │   │           ├── GTECH_COMPONENTS.dep
+│   │   │   │           └── GTECH_COMPONENTS.dmp
+│   │   │   ├── i
+│   │   │   │   └── WORK
+│   │   │   │       └── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC.df
+│   │   │   ├── r
+│   │   │   │   ├── FM_BBOX
+│   │   │   │   └── WORK
+│   │   │   │       ├── accum.mod
+│   │   │   │       │   └── accum.dmp
+│   │   │   │       ├── accum.recent
+│   │   │   │       ├── accum.sns
+│   │   │   │       ├── adr.mod
+│   │   │   │       │   └── adr.dmp
+│   │   │   │       ├── adr.recent
+│   │   │   │       ├── alu.mod
+│   │   │   │       │   └── alu.dmp
+│   │   │   │       ├── alu.recent
+│   │   │   │       ├── alu.sns
+│   │   │   │       ├── clk_gen.mod
+│   │   │   │       │   └── clk_gen.dmp
+│   │   │   │       ├── clk_gen.recent
+│   │   │   │       ├── clk_gen.sns
+│   │   │   │       ├── counter.mod
+│   │   │   │       │   └── counter.dmp
+│   │   │   │       ├── counter.recent
+│   │   │   │       ├── counter.sns
+│   │   │   │       ├── datactl.mod
+│   │   │   │       │   └── datactl.dmp
+│   │   │   │       ├── datactl.recent
+│   │   │   │       ├── datactl.sns
+│   │   │   │       ├── machinectl.mod
+│   │   │   │       │   └── machinectl.dmp
+│   │   │   │       ├── machinectl.recent
+│   │   │   │       ├── machine.mod
+│   │   │   │       │   └── machine.dmp
+│   │   │   │       ├── machine.recent
+│   │   │   │       ├── machine.sns
+│   │   │   │       ├── machine.ss
+│   │   │   │       ├── register.mod
+│   │   │   │       │   └── register.dmp
+│   │   │   │       ├── register.recent
+│   │   │   │       ├── register.sns
+│   │   │   │       └── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC.df
+│   │   │   ├── SCC28NHKCP_HSC35P140_RVT_SS_V0P81_125C_BASIC
+│   │   │   └── svr_tmp_dir
+│   │   ├── formality1.lck
+│   │   ├── formality1.log
+│   │   ├── formality1_svf
+│   │   │   └── svf.txt
+│   │   ├── formality2.log
+│   │   ├── formality2_svf
+│   │   │   └── svf.txt
+│   │   ├── formality3.lck
+│   │   ├── formality3.log
+│   │   ├── formality3_svf
+│   │   │   └── svf.txt
+│   │   ├── formality.lck
+│   │   ├── formality.log
+│   │   ├── formality_svf
+│   │   │   └── svf.txt
+│   │   └── log
+│   │       ├── matched.info
+│   │       ├── unmatched.info
+│   │       ├── verify_aborted_points.info
+│   │       ├── verify_failing_points.info
+│   │       └── verify_passing_points.info
+│   ├── lib
+│   │   ├── RRAM_IP_32Kx32_ECC_SS_0d81V_125C.db
+│   │   ├── scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic.db
+│   │   ├── SPC28NHKCPD18RNP_ss_V0p81_125C.db
+│   │   └── sram_sp_1024X32_ssg_cworstt_0p81v_0p81v_125c.db
+│   ├── logs
+│   │   └── sythesis.log
+│   ├── rpts
+│   │   ├── reportarea.rpt
+│   │   ├── reportcell.rpt
+│   │   ├── reportcheckdesign.rpt
+│   │   ├── reportconstraint.rpt
+│   │   ├── reportdesign.rpt
+│   │   ├── reportQOR.rpt
+│   │   ├── reporttimingmax.rpt
+│   │   ├── reporttimingmin.rpt
+│   │   └── reporttiming.rpt
+│   ├── temp
+│   │   ├── ACCUM.mr
+│   │   ├── accum-verilog.pvl
+│   │   ├── accum-verilog.syn
+│   │   ├── ADR.mr
+│   │   ├── adr-verilog.pvl
+│   │   ├── adr-verilog.syn
+│   │   ├── ALU.mr
+│   │   ├── alu-verilog.pvl
+│   │   ├── alu-verilog.syn
+│   │   ├── CLK_GEN.mr
+│   │   ├── clk_gen-verilog.pvl
+│   │   ├── clk_gen-verilog.syn
+│   │   ├── COUNTER.mr
+│   │   ├── counter-verilog.pvl
+│   │   ├── counter-verilog.syn
+│   │   ├── CPU.mr
+│   │   ├── cpu-verilog.pvl
+│   │   ├── cpu-verilog.syn
+│   │   ├── DATACTL.mr
+│   │   ├── datactl-verilog.pvl
+│   │   ├── datactl-verilog.syn
+│   │   ├── MACHINECTL.mr
+│   │   ├── machinectl-verilog.pvl
+│   │   ├── machinectl-verilog.syn
+│   │   ├── MACHINE.mr
+│   │   ├── machine-verilog.pvl
+│   │   ├── machine-verilog.syn
+│   │   ├── REGISTER.mr
+│   │   ├── register-verilog.pvl
+│   │   └── register-verilog.syn
+│   └── work
+│       ├── cpu.sdc
+│       ├── cpu.sdf
+│       ├── cpu.svf
+│       └── cpu.v
+└── test
+    ├── test1.dat
+    ├── test1.pro
+    ├── test2.dat
+    ├── test2.pro
+    ├── test3.dat
+    └── test3.pro
+/f [error opening dir]
 
+110 directories, 257 files
 
 ## 1. 配置装有全套synopsys tools的虚拟机或服务器；
     虚拟机链接：https://pan.baidu.com/s/1V0On_5sU3uiCVFKx-jHIhA       提取码：qtus 
