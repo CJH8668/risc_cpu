@@ -268,9 +268,9 @@
 
     8）将 branch push到远程仓库
 
-      git push -u origin master   ## master branch
+      git push origin master   ## master branch 
 
-      git push -u origin dev      ## master dev
+      git push origin dev      ## dev branch
 
 
 
