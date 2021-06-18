@@ -99,5 +99,6 @@
     故此处以VCS联合Verdi完成功能仿真（前仿）。
     因为VCS和Verdi这两个工具的开发者最初并不是一家公司，所以他们之间的联合使用并不友好，VCS所产生的“.vpd”文件只适用于DVE，故Verdi并不能直接使用，需要转化为Verdi可识别的“.fsdb”文件才行，所以需要先生成“.fsdb”文件。
 
-    需要修改debug及debug_netlist目录下的makefile
+    只需要修改debug及debug_netlist目录下的makefile:
+    依据个人仿真环境，修改debug目录下的 compile command中的-P，即环境变量novas.tab及pli.a的搜索路径。
 
