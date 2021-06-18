@@ -92,11 +92,12 @@
   | DC(Design Complier)| 综合工具，产生综合后的门级网表；还可以做简单的STA*           |
   | PT(Prime Time )    | 静态时序分析（STA）工具，生成相应的时序报告以检查时序约束；   |
   | Formaliity         | 形式验证工具，compare综合后的门级网表与rtl源码的对应point。  |
-* 只面向lay-out之前，只考虑各级门延时，未计入布线之后的线载延时
+* *只面向lay-out之前，只考虑各级门延时，未计入布线之后的线载延时
 
 ## 2. VCS Verdi联合仿真
     DVE是VCS内嵌的debug工具，具有和Verdi类似的波形调试功能。然而考虑到实际工程中多用更为专业的Verdi，
     故此处以VCS联合Verdi完成功能仿真（前仿）。
     因为VCS和Verdi这两个工具的开发者最初并不是一家公司，所以他们之间的联合使用并不友好，VCS所产生的“.vpd”文件只适用于DVE，故Verdi并不能直接使用，需要转化为Verdi可识别的“.fsdb”文件才行，所以需要先生成“.fsdb”文件。
 
-    在debug
+    需要修改debug及debug_netlist目录下的makefile
+
