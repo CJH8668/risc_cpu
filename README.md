@@ -1,6 +1,6 @@
 # 代码管理 数字IC设计前端———使用Git管理synopsys project
 
-## 0. directory structure；
+## 0. directory structure
 ```
   / risc_cpu /
              |--- debug/
@@ -79,6 +79,7 @@
              |
              |--- scc28nhkcp_hsc35p140_rvt.v
              \--- README.md
+```
 
 ## 1. 配置装有全套synopsys tools的虚拟机或服务器；
     虚拟机链接：https://pan.baidu.com/s/1V0On_5sU3uiCVFKx-jHIhA       提取码：qtus 
