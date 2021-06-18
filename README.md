@@ -193,7 +193,7 @@
     以上几个文件反映了静态时序分析的结果。若未能达到设计要求，可根据以上报告修改RTL设计或PPA约束，直到满足设计需求为止。
 
 ## 5. 门级网表仿真（后仿）
-    完成DC综合之后会在/syn/work/目录下生成一个.v门级网表（netlist）。该网表是以工艺库单元例化生成的Verilog文件，反映了利用工艺库中的基本组合元件生成项目所需的功能模块之间的连接关系。可以对这个门级网表进行功能仿真，以验证此网表与RTL代码所组成的模块之间功能的相符性。
+    完成DC综合之后会在/syn/work/目录下生成一个.v门级网表（netlist）。该网表是以工艺库单元例化生成的Verilog文件，反映了利用工艺库中的基本组合元件生成项目所需的功能模块之间的连接关系。可以对这个门级网表进行功能仿真，以验证此网表与RTL代码所组成的模块之间功能的一致性。
 
     门级网表仿真需要找到.db工艺库对应的原.v工艺库，可根据使用习惯放到合适的位置。本例中将.v工艺库放到了risc_cpu/路径下。
 
@@ -203,9 +203,9 @@
     
     2）添加LIB_FILE = -v  ".v工艺库路径"；
 
-    3) #compile command中选用门级网表作为仿真文件（-f ../scripts/FileList_netlist.f）；
+    3) 在#compile command中选用门级网表作为仿真文件（-f ../scripts/FileList_netlist.f）；
 
-    4）#start verdi中选用 # netlist simulation的相应选项；
+    4）在#start verdi中选用 # netlist simulation的相应选项；
 
     5）在testbench中添加反标注文件：
 
@@ -215,8 +215,67 @@
       `endif
       end
 
-      注：选用delay方式：在compile开关选项上加 +mindelays/+typedelays/+maxdelays
-  
+## 6. 形式验证
+    所谓形式验证，就是通过比较两个设计在逻辑功能上是否等同的方法来验证电路的功能。这种方法的优点在于它不仅提高了验证的速度，可以在相当大的程度上缩短数字设计的周期，而且更重要的是，它摆脱了工艺的约束和仿真testbench的不完全性，更加全面地检查了电路的功能。
+
+    Formality是Synopsys的形式验证工具，你可以用它来比较一个修改后的设计（如ECO）和它原来的版本，或者一个RTL级的设计和它的门级网表，再或者综合后的门级网表和做完布局布线及优化之后的门级网表在功耗上是否一致。
+
+    formality有两种启动方式：图形用户界面GUI和命令行界面。
+
+    GUI界面启动命令：formality;
+    命令行启动命令： fm_shell;
+
+    以下以编写命令行脚本文件为例：
+    在/formality/创建log目录以存放formality生成的报告，后期可通过查看报告中的compare point来检查形式验证是否通过。
+    可根据项目的具体设计要求修改/formality/fm.tcl脚本，以达到设计的各项指标要求。
+
+    在/formality/目录下打开bash shell，键入
+
+      fm_shell -file fm.tcl
+
+    以运行fm.tcl脚本文件，进而完成形式验证运行过程中会在/formality/目录下生成一系列工程文件（夹）。
+
+    查看/formality/log中的几个.info文件。若全部都为Passing compare points，无failing compare points和aborted compare points，则形式验证通过。
+
+## 7. 将整个文件上传至Git服务器
+    可将整个risc_cpu工程上传至Gitee，完成服务器云备份。注意，备份之前需要先上传自己的SSH公钥至Gitee。
+    
+    具体步骤如下：
+
+    1）先在远程Gitee仓库创建 Repositories，项目名称最好与本地库一致。为了避免错误，不要初始化README,license或者gitignore文件;
+
+    2）打开本地shell终端并切换至本地项目目录;
+
+    3）初始化本地仓库;
+      
+      git init
+
+    4）添加（add）文件到本地仓库;
+      
+      git add .
+
+    5）提交（commit）文件;
+
+      git commit -m "YOUR COMMIT"
+
+    6） 添加远程仓库地址到本地仓库。
+    
+      git remote add origin git@gitee.com:xxx/xxx.git
+
+    7）查看已链接的本地仓库
+
+      git remote -v
+
+    8）将 branch push到远程仓库
+
+      git push -u origin master   ## master branch
+
+      git push -u origin dev      ## master dev
+
+
+
+
+
 
 
 
