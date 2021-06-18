@@ -270,6 +270,8 @@
 
       git push origin master   ## master branch 
 
+    或
+
       git push origin dev      ## dev branch
 
 
