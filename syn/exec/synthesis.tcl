@@ -76,7 +76,7 @@ set_load  -min 0.5   [all_outputs]
 	set_max_capacitance 	2	[current_design]
 
 
-
+    set verilogout_no_tri true
 	set_fix_multiple_port_nets -all  -buffer_constants
 	set_auto_disable_drc_nets -clock true -constant true
 	

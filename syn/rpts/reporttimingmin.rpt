@@ -6,7 +6,7 @@ Report : timing
         -max_paths 1
 Design : cpu
 Version: O-2018.06-SP1
-Date   : Tue Jun 15 10:42:41 2021
+Date   : Sat Jun 19 17:47:32 2021
 ****************************************
 
 Operating Conditions: ss_v0p81_125c   Library: scc28nhkcp_hsc35p140_rvt_ss_v0p81_125c_basic

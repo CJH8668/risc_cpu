@@ -3,7 +3,7 @@
 Report : design
 Design : cpu
 Version: O-2018.06-SP1
-Date   : Tue Jun 15 10:42:41 2021
+Date   : Sat Jun 19 17:47:32 2021
 ****************************************
 
 Design allows ideal nets on clock nets.

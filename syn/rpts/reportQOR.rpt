@@ -3,7 +3,7 @@
 Report : qor
 Design : cpu
 Version: O-2018.06-SP1
-Date   : Tue Jun 15 10:42:41 2021
+Date   : Sat Jun 19 17:47:32 2021
 ****************************************
 
 
@@ -67,8 +67,8 @@ Date   : Tue Jun 15 10:42:41 2021
   Logic Optimization:                  0.01
   Mapping Optimization:                0.53
   -----------------------------------------
-  Overall Compile Time:                3.32
-  Overall Compile Wall Clock Time:     3.61
+  Overall Compile Time:                3.34
+  Overall Compile Wall Clock Time:     3.63
 
   --------------------------------------------------------------------
 

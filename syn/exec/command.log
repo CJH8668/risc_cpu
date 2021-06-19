@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP1 for linux64 -- Jul 19, 2018
-#@ # Date:   Tue Jun 15 10:42:28 2021
+#@ # Date:   Sat Jun 19 17:47:20 2021
 #@ # Run by: chengjinhui@EDA-Server
 #@ 
 
@@ -6704,7 +6704,7 @@ source -echo -verbose /home1/chengjinhui/risc_cpu/syn/exec/synthesis.tcl
 #@ set_max_capacitance 	2	[current_design]
 #@ 
 #@ 
-#@ 
+#@ set verilogout_no_tri true
 #@ set_fix_multiple_port_nets -all  -buffer_constants
 #@ set_auto_disable_drc_nets -clock true -constant true
 #@ 

@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////
 // Created by: Synopsys DC Expert(TM) in wire load mode
 // Version   : O-2018.06-SP1
-// Date      : Tue Jun 15 10:42:41 2021
+// Date      : Sat Jun 19 17:47:32 2021
 /////////////////////////////////////////////////////////////
 
 
@@ -395,7 +395,6 @@ module datactl ( data, in, data_ena );
   input [7:0] in;
   input data_ena;
 
-  tri   [7:0] data;
 
   TBUFV24_140P9T35R \data_tri[0]  ( .I(in[0]), .OE(data_ena), .Z(data[0]) );
   TBUFV24_140P9T35R \data_tri[6]  ( .I(in[6]), .OE(data_ena), .Z(data[6]) );
@@ -565,7 +564,6 @@ module cpu ( clk, reset, halt, rd, wr, addr, data );
   wire   [7:0] alu_out;
   wire   [7:0] accum;
   wire   [12:0] pc_addr;
-  tri   [7:0] data;
 
   INV0_140P9T35R U1 ( .I(reset), .ZN(n1) );
   INV0_140P9T35R U2 ( .I(n1), .ZN(n2) );
