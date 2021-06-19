@@ -88,18 +88,18 @@
   
   |  工具 | 说明   |
   |:-|:-|
-  | VCS                 | 仿真工具，用来compile rtl源代码，并且生成二进制simulate文件；|
+  | VCS                 | 仿真工具，用来compile RTL源代码，并且生成二进制simulate文件；|
   | Verdi & DVE         | debug工具，用来查看仿真波形；                               |
   | DC(Design Complier) | 综合工具，产生综合后的门级网表；还可以做简单的STA*           |
   | PT(Prime Time )     | 静态时序分析（STA）工具，生成相应的时序报告以检查时序约束；   |
-  | Formaliity          | 形式验证工具，compare综合后的门级网表与rtl源码的对应point。  |
+  | Formaliity          | 形式验证工具，比较综合后的门级网表与RTL源码的compare point。  |
 
     *只面向lay-out之前，只考虑各级门延时，未计入布线之后的线载延时
 
 ## 2. project创建
     1）将项目所有用到的RTL源代码及testbench放到src目录下；
 
-    2）在scripts目录下分别生成以下file list：
+    2）在scripts目录下分别生成以下文件列表文件：
 
   |  文件列表文件 | 说明   |
   |:-|:-|
@@ -186,25 +186,35 @@
 
     在/syn/exec/目录下，打开csh shell，或者打开bash shell，键入
 
-      csh  run
+      csh run
 
     等待DC综合完成后，将会在/syn/logs/,/syn/rpts/,/syn/temp/,/syn/work/下生成相应的文件。
 
     DC综合结果的日志文件将存放在/syn/logs/synthesis.log文件中，此日志文件记录了综合的详细过程和综合结果。
 
-    在不涉及物理布局布线的前提下，可以使用DC完成STA，而暂时无需PT。STA生成的时序分析报告存放于/syn/rpts/目录下，
+    在不涉及物理布局布线的前提下，可以使用DC自带的静态时序分析引擎完成STA。STA生成的时序分析报告存放于/syn/rpts/目录下：
+
+    运行后一般先看log文件，看其是否有Error和Warning信息，如有则需要仔细查看，直到运行完log文件中没有Error和Warning信息（ Warning可存在，但不能影响结果）。接下来就要分析综合结果，查看rpt文件（如area.rpt， cell.rpt， const.rpt， setuptiming.rpt等），包括面积时延等方面的信息。
+
+    以下几个文件反映了面积方面的结果：
+
+    reportarea.rpt
+    reportcell.rpt
+
+    以下几个文件反映了静态时序分析的结果。
 
       reportQOR.rpt
-      reporttiming.rpt
       reporttimingmax.rpt
       reporttimingmin.rpt
 
-    以上几个文件反映了静态时序分析的结果。若未能达到设计要求，可根据以上报告修改RTL设计或PPA约束，直到满足设计需求为止。
+    综合过程是一个反复迭代的过程。若未能达到设计要求，可根据以上报告修改RTL设计或所加的约束条件，多次反复实验，直到满足设计需求为止。
 
 ## 5. 门级网表仿真（后仿）
-    完成DC综合之后会在/syn/work/目录下生成一个.v门级网表（netlist）。该网表是以工艺库单元例化生成的Verilog文件，反映了利用工艺库中的基本组合元件生成项目所需的功能模块之间的连接关系。可以对这个门级网表进行功能仿真，以验证此网表与RTL代码所组成的模块之间功能的一致性。
+    完成DC综合之后会在/syn/work/目录下生成一个*.v门级网表（netlist）。该网表是以工艺库单元例化生成的Verilog文件，反映了利用工艺库中的基本组合元件生成项目所需的功能模块之间的连接关系。可以对这个门级网表进行时序仿真，以验证综合后网表实现的功能与RTL级的功能是一致的。
 
-    门级网表仿真需要找到.db工艺库对应的原.v工艺库，可根据使用习惯放到合适的位置。本例中将.v工艺库放到了risc_cpu/路径下。
+    这里要注意，在时序网表的工作目录下一定要包含由工艺库提供的标准单元的*.v文件，因为综合后的网表文件是由综合工艺库提供的标准单元组成的。
+    
+    本例中将scc28nhkcp_hsc35p140_rvt.v工艺库放到了risc_cpu/路径下。
 
     为了完成这个任务，需要进行以下设置：
     
@@ -218,7 +228,7 @@
 
     5）在testbench中添加反标注文件：
 
-      initial begin         // sdf文件反标注，用于门级功能仿真 注意修改.sdf文件的路径
+      initial begin         // sdf文件反标注，用于时序仿真 注意修改.sdf文件的路径
       `ifdef NET_SIM
           $sdf_annotate("/home1/chengjinhui/risc_cpu/syn/work/cpu.sdf",cpu,"TYPICAL","1:1:1","FROM_MTM");
       `endif
